@@ -1,0 +1,15 @@
+div {
+    margin:15px; border: 2px solid blue
+}
+
+#main_heading {
+    margin:15px; border: 2px solid rgb(214, 7, 214); color: red;
+}
+
+li {
+    display: inline-block
+}
+
+.stuff{
+    margin:15px; border: 2px solid green
+}
