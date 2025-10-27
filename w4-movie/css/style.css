@@ -141,3 +141,35 @@ a{
 #ralph p{
     color: bisque;
 }
+
+#spongebob img:hover{
+    animation: attention 0.5s ease-out forwards;
+}
+
+#ralph img:hover{
+    animation: attention 0.5s ease-out forwards;
+}
+
+#header h1:active{
+    animation: spin 1s ease-in-out forwards;
+}
+
+@keyframes attention{
+    from{
+        width: 240px; 
+        height: 350px;
+    }
+    to{
+        width: 250px; 
+        height: 360px;
+    }
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
