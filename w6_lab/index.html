@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 6">
+    <meta name="author" content="Alvan Boxwell Jr">
+
+    <title>Calculator Lab</title>
+</head>
+<body>
+    <script>
+        function userInput(){
+            var inOne = prompt("Enter your first number:")
+            var inTwo = prompt("Enter your second number:")
+            var numOne = parseInt(inOne)
+            var numTwo = parseInt(inTwo)
+            return {numOne, numTwo}
+        }
+        function addition(nO, nT){
+            var numnum = nO + nT
+            return numnum
+        }
+        function multiplication(nO, nT){
+            var numnum = nO * nT
+            return numnum
+        }
+        alert("Hello, Welcome to Calculator")
+        var sign = prompt("Would you like to add or multiply? (Please enter '+' or '*')")
+        if (sign == "+"){
+            alert("You have selected Addition")
+            var obj = userInput()
+            var numnum = obj.numOne + obj.numTwo
+            alert("You're answer is: " + numnum)
+        }
+        else if (sign == "*"){
+            alert("You have selected Multiplication")
+            var obj = userInput()
+            var numnum = obj.numOne * obj.numTwo
+            alert("You're answer is: " + numnum)
+        }
+    </script>
+</body>
+</html>
