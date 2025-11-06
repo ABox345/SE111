@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 6">
+    <meta name="author" content="Alvan Boxwell Jr">
+    <title>Pay Calculator</title>
+</head>
+<body>
+    <h1>Pay Calculator (Bi Weekly)</h1>
+
+    <p id="output"></p>
+
+    <script>
+        // Function:
+        function userInput(){
+            var hR = prompt("Please enter your hourly pay:")
+            var hW = prompt("Please enter how many hours you worked for one week:")
+            var hrlyRate = Number(hR)
+            var hrsWorked = Number(hW)
+
+            return{hrlyRate, hrsWorked}
+        }
+        var taxRate = 0.2
+        obj = userInput()
+        var twoPay = obj.hrlyRate * obj.hrsWorked
+        var grossPay = twoPay * 2
+        var twoWk = grossPay * 2
+        var samShare = twoWk * 0.2
+        var netPay = grossPay - samShare
+
+        alert(
+            "Gross Pay: $" + grossPay.toFixed(2) +
+            "\nUncle Sam's Share: $" + samShare.toFixed(2) +
+            "\nNet Pay: $" + netPay.toFixed(2)
+        )
+
+        console.log(
+            "Gross Pay: $" + grossPay.toFixed(2) +
+            "\nUncle Sam's Share: $" + samShare.toFixed(2) +
+            "\nNet Pay: $" + netPay.toFixed(2)
+        )
+        
+        document.getElementById("output").innerHTML = 
+            "Gross Pay: $" + grossPay.toFixed(2) +
+            "<br>Uncle Sam's Share: $" + samShare.toFixed(2) +
+            "<br>Net Pay: $" + netPay.toFixed(2);     
+
+/*      
+        //Normal:
+        var hrlyRate = 14.50
+        var hrsWorked = 32
+        var taxRate = 0.2
+
+        var twoPay = obj.hrlyRate * obj.hrsWorked
+        var grossPay = twoPay * 2
+        var twoWk = grossPay * 2
+        var samShare = twoWk * 0.2
+        var netPay = grossPay - samShare
+
+        alert(
+            "Gross Pay: $" + grossPay.toFixed(2) +
+            "\nUncle Sam's Share: $" + samShare.toFixed(2) +
+            "\nNet Pay: $" + netPay.toFixed(2)
+        ) 
+            
+        console.log(
+            "Gross Pay: $" + grossPay.toFixed(2) +
+            "\nUncle Sam's Share: $" + samShare.toFixed(2) +
+            "\nNet Pay: $" + netPay.toFixed(2)
+        )
+        
+        document.getElementById("output").innerHTML = 
+            "Gross Pay: $" + grossPay.toFixed(2) +
+            "<br>Uncle Sam's Share: $" + samShare.toFixed(2) +
+            "<br>Net Pay: $" + netPay.toFixed(2);
+*/
+    </script>
+    
+</body>
+</html>
